@@ -1,0 +1,9 @@
+
+black==22.10.0
+flake8==6.0.0
+pyflakes==3.0.1
+ipykernel==6.17.1
+ipython==8.7.0
+jupyter==1.0.0
+rope==1.5.1
+isort==5.11.2
