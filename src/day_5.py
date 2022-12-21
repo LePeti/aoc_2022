@@ -8,6 +8,13 @@ def move_crates(crates: list[list], number: int, fro: int, to: int) -> list[list
     return crates
 
 
+def move_crates_new(crates: list[list], number: int, fro: int, to: int) -> list[list]:
+    crates[to - 1].extend(crates[fro - 1][-number:])
+    crates[fro - 1] = crates[fro - 1][:-number]
+
+    return crates
+
+
 if __name__ == "__main__":
     crates = get_crates_input()
     moves = get_moves_input()
@@ -21,3 +28,12 @@ top_crates = [stack[-1] for stack in crates]
 print(f"Part 1 answer is {''.join(top_crates)}")
 
 # ----------
+
+crates = get_crates_input()
+
+for move in moves:
+    crates = move_crates_new(crates, *move)
+
+top_crates = [stack[-1] for stack in crates]
+
+print(f"Part 2 answer is {''.join(top_crates)}")
