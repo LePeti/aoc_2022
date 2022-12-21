@@ -30,8 +30,7 @@
     "python.formatting.provider": "black",
     "python.languageServer": "Pylance",
     "python.analysis.extraPaths": [
-        "~/.pyenv/versions/aoc_2022_py3.11/lib/python3.8.10/site-packages",
-        "~/.pyenv/versions/3.8.10/envs/aoc_2022_py3.11/lib/python3.8.10/site-packages",
+        "~/.pyenv/versions/aoc_2022_py3.11/lib/python3.11/site-packages",
         "./src"
     ],
     "python.defaultInterpreterPath": "~/.pyenv/versions/aoc_2022_py3.11/bin/python",
