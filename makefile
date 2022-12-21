@@ -20,3 +20,7 @@ clean: ## Delete /.pytest_cache and tests/__pycache__
 add-package: ## Install latest python package and add to requirements. Usage: make add-package package=<package_name>
 	pip install $(package)
 	pip freeze | grep -i $(package) >> requirements.txt
+
+create-daily-files: ## Create day_x.py under the `src` and `input` folders. Usage: `make create-daily-files day=5`
+	touch src/day_$(day).py
+	touch input/day_$(day).py
