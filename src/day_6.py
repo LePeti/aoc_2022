@@ -19,3 +19,10 @@ if __name__ == "__main__":
     print(f"Answer for part 1 is {i + 4}")
 
 # -----------
+
+    i = 0
+
+    while not are_n_letters_unique(signal[i:i + 14], 14):
+        i += 1
+
+    print(f"Answer for part 1 is {i + 14}")
