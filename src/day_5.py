@@ -12,10 +12,6 @@ if __name__ == "__main__":
     crates = get_crates_input()
     moves = get_moves_input()
 
-    # this way, the crate on top of each stack is the last element of the list
-    for crate in crates:
-        crate.reverse()
-
 # move 10 from 6 to 3
 for move in moves:
     crates = move_crates(crates, *move)
@@ -23,3 +19,5 @@ for move in moves:
 top_crates = [stack[-1] for stack in crates]
 
 print(f"Part 1 answer is {''.join(top_crates)}")
+
+# ----------

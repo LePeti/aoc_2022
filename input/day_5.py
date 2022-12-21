@@ -20,6 +20,11 @@ def get_crates_input() -> list:
         ["R", "L", "D", "P", "S", "Z", "C",],
         ["F", "B", "P", "G", "V", "J", "S", "D",],
     ]
+
+    # this way, the crate on top of each stack is the last element of the list
+    for crate in input:
+        crate.reverse()
+
     return input
 
 
