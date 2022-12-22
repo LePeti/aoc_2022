@@ -1,3 +1,21 @@
+def get_dummy_terminal_output() -> list[str]:
+    output = [
+        "$ ls",
+        "dir dir_1",
+        "dir dir_2",
+        "10 file_1",
+        "$ cd dir_1",
+        "$ ls",
+        "20 file_11",
+        "$ cd ..",
+        "$ cd dir_2",
+        "$ ls",
+        "40 file_21",
+    ]
+
+    return output
+
+
 def get_terminal_output() -> list[str]:
     output = [
         "$ cd /",
