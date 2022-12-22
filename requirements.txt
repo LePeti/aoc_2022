@@ -8,3 +8,4 @@ jupyter==1.0.0
 rope==1.5.1
 isort==5.11.2
 pytest==7.2.0
+numpy==1.24.0
