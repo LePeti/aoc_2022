@@ -1,6 +1,9 @@
 from input.day_7 import get_terminal_output, get_dummy_terminal_output
 import re
 
+TOTAL_SPACE = 70000000
+SPACE_REQUIRED = 30000000
+
 
 def change_dir(new_dir: str, tree: dict, current_path: str) -> tuple[str, dict]:
     current_path = current_path + new_dir + "/"
@@ -62,3 +65,12 @@ if __name__ == "__main__":
     print(f"The answer for part 1 is {sum(small_size_folders.values())}")
 
 # --------
+
+    space_available = TOTAL_SPACE - folder_sizes.get("/")
+    space_needed = SPACE_REQUIRED - space_available
+
+    folders_large_enough = {
+        key: value for (key, value) in folder_sizes.items() if value >= space_needed
+    }
+
+    print(f"The answer for part 2 is {min(folders_large_enough.values())}")
