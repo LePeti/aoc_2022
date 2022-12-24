@@ -1,8 +1,6 @@
 from src.day_8 import count_visible_trees
 from input.day_8 import get_dummy_map
 
-import numpy as np
-
 dummy_map = get_dummy_map()
 
 

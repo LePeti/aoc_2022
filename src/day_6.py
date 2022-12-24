@@ -2,9 +2,10 @@ from input.day_6 import get_input
 
 
 def are_n_letters_unique(letters: str, n: int) -> bool:
-    assert (
-        len(letters) == n
-    ), f"input must be {n} letters. Your input was '{letters}' (length of {len(letters)})"
+    assert len(letters) == n, (
+        f"input must be {n} letters. "
+        f"Your input was '{letters}' (length of {len(letters)})"
+    )
     return len(set(letters)) == n
 
 

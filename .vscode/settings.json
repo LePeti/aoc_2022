@@ -29,7 +29,7 @@
         "./src"
     ],
     "python.defaultInterpreterPath": "~/.pyenv/versions/aoc_2022_py3.11/bin/python",
-    "editor.rulers": [100],
+    "editor.rulers": [88],
     "[markdown]": {
         "editor.wordWrap": "wordWrapColumn",
         "editor.wordWrapColumn": 120,
