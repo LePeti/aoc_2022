@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
     print(f"answer for part 1: {sum(subset_pairs)}")
 
-# --------
+    # --------
 
     overlapping_pairs = [int(do_sections_overlap(*elf_pair)) for elf_pair in elf_pairs]
 

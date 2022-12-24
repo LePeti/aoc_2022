@@ -65,7 +65,7 @@ if __name__ == "__main__":
 
     print(f"The answer for part 1 is {sum(small_size_folders.values())}")
 
-# --------
+    # --------
 
     space_available = TOTAL_SPACE - folder_sizes.get("/")
     space_needed = SPACE_REQUIRED - space_available

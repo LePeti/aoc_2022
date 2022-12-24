@@ -33,9 +33,9 @@ def highest_scenic_score(map: np.ndarray) -> tuple[int, int, int]:
 
 def is_tree_visible(i: int, j: int, map: np.ndarray) -> bool:
     trees_above = map[:i, j]
-    trees_below = map[i + 1:, j]
+    trees_below = map[i + 1 :, j]
     trees_left = map[i, :j]
-    trees_right = map[i, j + 1:]
+    trees_right = map[i, j + 1 :]
 
     tree_height = map[i, j]
 
@@ -51,9 +51,9 @@ def get_tree_scenic_score(i: int, j: int, map: np.ndarray) -> int:
     scenic_score = 1
 
     trees_above = np.flip(map[:i, j])
-    trees_below = map[i + 1:, j]
+    trees_below = map[i + 1 :, j]
     trees_left = np.flip(map[i, :j])
-    trees_right = map[i, j + 1:]
+    trees_right = map[i, j + 1 :]
 
     tree_height = map[i, j]
 
