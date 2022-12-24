@@ -1,5 +1,6 @@
-from input.day_7 import get_terminal_output, get_dummy_terminal_output
 import re
+
+from input.day_7 import get_dummy_terminal_output, get_terminal_output
 
 TOTAL_SPACE = 70000000
 SPACE_REQUIRED = 30000000

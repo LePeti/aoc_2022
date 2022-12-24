@@ -1,4 +1,5 @@
 import numpy as np
+
 from input.day_8 import get_map
 
 

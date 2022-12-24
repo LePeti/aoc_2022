@@ -1,4 +1,4 @@
-from input.day_5 import get_moves_input, get_crates_input
+from input.day_5 import get_crates_input, get_moves_input
 
 
 def move_crates(crates: list[list], number: int, fro: int, to: int) -> list[list]:

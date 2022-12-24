@@ -1,5 +1,6 @@
-from input.day_3 import get_input_part_1, get_input_part_2
 from string import ascii_lowercase
+
+from input.day_3 import get_input_part_1, get_input_part_2
 
 
 def get_upper_and_lower_case_abc() -> str:
