@@ -1,3 +1,5 @@
+import numpy as np
+
 from input.day_9 import get_instructions
 
 
@@ -14,8 +16,10 @@ def tail_follows_head(
         return tail_pos  # no move
     elif ((i_dist == 2) & (j_dist == 0)) | ((i_dist == 0) & (j_dist == 2)):
         return move_in_direction(tail_pos, last_head_move)
-    elif ((i_dist == 2) & (j_dist == 1)) | ((i_dist == 2) & (j_dist == 1)):
+    elif ((i_dist == 2) & (j_dist == 1)) | ((i_dist == 1) & (j_dist == 2)):
         return tail_follows_head_diagonally(head_pos, tail_pos)
+    else:
+        raise Exception("This case should not exist.", head_pos, tail_pos)
 
 
 def move_in_direction(
@@ -55,3 +59,20 @@ def tail_follows_head_diagonally(
 
 if __name__ == "__main__":
     input = get_instructions()
+    total_direction = sum([instruction[1] for instruction in input])
+
+    grid = np.zeros([5001, 5001])
+    head_position = (2501, 2501)
+    tail_position = (2501, 2501)
+
+    grid[tail_position] = 1
+
+    for direction, num_steps in input:
+        for step in range(num_steps):
+            head_position = move_in_direction(head_position, direction)
+            tail_position = tail_follows_head(head_position, tail_position, direction)
+            grid[tail_position] += 1
+
+    print(f"The naswer for part 1 is {(grid > 0).sum()}")
+
+    # ----------
