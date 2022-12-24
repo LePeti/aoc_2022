@@ -76,3 +76,20 @@ if __name__ == "__main__":
     print(f"The naswer for part 1 is {(grid > 0).sum()}")
 
     # ----------
+
+    grid = np.zeros([5001, 5001])
+    starting_position = (2501, 2501)
+    knots = {key: starting_position for key in range(0, 10)}
+
+    grid[starting_position] = 1
+
+    for direction, num_steps in input:
+        for step in range(num_steps):
+            knots[0] = move_in_direction(knots[0], direction)
+
+            for i in range(1, 10):
+                knots[i] = tail_follows_head(
+                    knots[i - 1], knots[i], direction)
+                grid[knots[9]] += 1
+
+    print(f"The naswer for part 1 is {(grid > 0).sum()}")
